@@ -3,7 +3,10 @@
 const sum = (a, b) => {
   return a + b;
 };
-console.log(sum(13, 17));
+
+console.log("--------------------------");
+console.log("Task 1:", sum(13, 17));
+console.log("--------------------------");
 
 // 2. Write a function that takes a string as an argument. Extract the last 3 characters from the string. Return the result
 
@@ -12,7 +15,8 @@ const text = (textRow) => {
   return last3;
 };
 
-console.log(text("Lorem"));
+console.log("Task 2:", text("Lorem"));
+console.log("--------------------------");
 
 // 3. Write a function that takes a number (a) as argument Split a into its individual digits and return them in an array.
 
@@ -21,7 +25,8 @@ const split = (a) => {
   return digits;
 };
 
-console.log(split(3141592));
+console.log("Task 3:", split(3141592));
+console.log("--------------------------");
 
 // 4. Write a function that takes an array (a) and a number (n) as arguments It should return the last n elements of a
 
@@ -30,4 +35,29 @@ const func = (a, n) => {
   return last;
 };
 
-console.log(func([13, 15, 17], 2));
+console.log("Task 4:", func([13, 15, 17], 2));
+console.log("--------------------------");
+
+// 5. Write a function that takes two arrays as arguments Merge both arrays and remove duplicate values Sort the merge result in ascending order Return the resulting array
+
+const arrayFunc = (array1, array2) => {
+  const array3 = array1.concat(array2);
+  const uniqueChars = [...new Set(array3)];
+  uniqueChars.sort();
+  return uniqueChars;
+};
+
+console.log("Task 5:", arrayFunc([3, 2, 1], [3, 5, 6]));
+console.log("--------------------------");
+
+// 6. Write a function that takes an object (a) and a string (b) as argument  Return true if the object has a property with key 'b' Return false otherwise
+
+const objFunc = (a, b) => {
+  return b in a;
+};
+
+console.log(
+  "Task 6:",
+  objFunc({ name: "Lauris", age: 23, company: "Accenture" }, "company")
+);
+console.log("--------------------------");
